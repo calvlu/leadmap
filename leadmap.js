@@ -36,7 +36,7 @@ map.on('load', function() {
 
       var coordinates = features[0].geometry.coordinates.slice();
       var description = '<h3>' + features[0].properties.county +', ' + features[0].properties.state + '</h3>' +
-        '<p>Avg Lead Level: ' + features[0].properties.sample_ppb + ' ppb<br> (parts per billion)</p>' +
+        '<p>Avg Lead Level: <b>' + features[0].properties.sample_ppb + ' ppb</b><br> (parts per billion)</p>' +
         'Asian: ' + (features[0].properties.perc_asian*100).toFixed() + '%<br>' +
         'Black: ' + (features[0].properties.perc_black*100).toFixed() + '%<br>' +
         'Hispanic: ' + (features[0].properties.perc_hisp*100).toFixed() + '%<br>' +
