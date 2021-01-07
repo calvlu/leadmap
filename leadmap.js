@@ -22,6 +22,20 @@ map.on('load', function() {
 
   // Change the cursor style as a UI indicator.
   map.getCanvas().style.cursor = 'pointer';
+
+  // legend
+  const legend = document.getElementById('legend');
+  const legendColors = document.getElementById('legend-colors');
+  const legendValues = document.getElementById('legend-values');
+  const legValues = [0, 2, 5, 10, 15, 47];
+  const legColors = ['#002aa8', '#086afd', '#87b3ff', '#f2ab61', '#d47841', '#aa4d2b'];
+  legend.classList.add('block-ml');
+  legValues.forEach((stop, idx) => {
+    const key = `<div class='col h12' style='background-color:${legColors[idx]}'></div>`;
+    const value = `<div class='col align-center'>${stop}</div>`;
+    legendColors.innerHTML += key;
+    legendValues.innerHTML += value;
+  });
   // Create a popup, but don't add it to the map yet.
   var popup = new mapboxgl.Popup({
     closeButton: false

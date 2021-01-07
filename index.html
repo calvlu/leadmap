@@ -6,6 +6,8 @@
 	<meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
 	<script src="https://api.mapbox.com/mapbox-gl-js/v2.0.0/mapbox-gl.js"></script>
 	<link href="https://api.mapbox.com/mapbox-gl-js/v2.0.0/mapbox-gl.css" rel="stylesheet" />
+	<link href="https://api.mapbox.com/mapbox-assembly/v0.24.0/assembly.min.css" rel="stylesheet">
+	<script async defer src="https://api.mapbox.com/mapbox-assembly/v0.24.0/assembly.js"></script>
 	<style>
 		body { margin: 0; padding: 0; }
 		#map { position: absolute; top: 0; bottom: 0; width: 100%; }
@@ -23,7 +25,15 @@
 	href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.5.1/mapbox-gl-geocoder.css"
 	type="text/css"
 	/>
-	<div id="map"></div>
+	<div id="map">
+		<div
+          id="legend"
+          class="my36 mx12 px12 py12 absolute z1 right w300-ml bottom bg-white round-ml shadow-darken10 none"
+        >
+          <div id="legend-colors" class="grid mb6"></div>
+          <div id="legend-values" class="grid txt-xs"></div>
+        </div>
+	</div>
 
 	<script src="leadmap.js">
 	</script>
