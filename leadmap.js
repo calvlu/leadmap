@@ -27,7 +27,7 @@ map.on('load', function() {
   const legend = document.getElementById('legend');
   const legendColors = document.getElementById('legend-colors');
   const legendValues = document.getElementById('legend-values');
-  const legValues = [0, 2, 5, 10, 15, 47];
+  const legValues = [0, 2, 5, 10, 15, '20+'];
   const legColors = ['#002aa8', '#086afd', '#87b3ff', '#f2ab61', '#d47841', '#aa4d2b'];
   legend.classList.add('block-ml');
   legValues.forEach((stop, idx) => {
@@ -51,7 +51,7 @@ map.on('load', function() {
       var coordinates = features[0].geometry.coordinates.slice();
       var description = '<h3>' + features[0].properties.county +', ' + features[0].properties.state + '</h3>' +
         '<p>Avg. Lead Level: <b>' + features[0].properties.sample_ppb + ' ppb</b><br> (parts per billion)</p>' +
-        'Asian: ' + (features[0].properties.perc_asian*100).toFixed() + '%<br>' +
+        '<p></p>Asian: ' + (features[0].properties.perc_asian*100).toFixed() + '%<br>' +
         'Black: ' + (features[0].properties.perc_black*100).toFixed() + '%<br>' +
         'Hispanic: ' + (features[0].properties.perc_hisp*100).toFixed() + '%<br>' +
         'Native: ' + (features[0].properties.perc_native*100).toFixed() + '%<br>' +
