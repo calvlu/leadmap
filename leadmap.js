@@ -1,4 +1,3 @@
-
 mapboxgl.accessToken = 'pk.eyJ1IjoiY2Fsdmx1IiwiYSI6ImNramk1ZWY4NzFuZDEyeXFwOWwyMWo5aWwifQ.hC7XWRkw4mr3Ql7Et7XQxQ';
 var map = new mapboxgl.Map({
   container: 'map',
@@ -49,14 +48,14 @@ map.on('load', function() {
     if (features.length > 0) {
 
       var coordinates = features[0].geometry.coordinates.slice();
-      var description = '<h3>' + features[0].properties.county +', ' + features[0].properties.state + '</h3>' +
+      var description = '<h3>' + features[0].properties.county + ', ' + features[0].properties.state + '</h3>' +
         '<p>Avg. Lead Level: <b>' + features[0].properties.sample_ppb + ' ppb</b><br> (parts per billion)</p>' +
-        '<p></p>Asian: ' + (features[0].properties.perc_asian*100).toFixed() + '%<br>' +
-        'Black: ' + (features[0].properties.perc_black*100).toFixed() + '%<br>' +
-        'Hispanic: ' + (features[0].properties.perc_hisp*100).toFixed() + '%<br>' +
-        'Native: ' + (features[0].properties.perc_native*100).toFixed() + '%<br>' +
-        'White: ' + (features[0].properties.perc_white*100).toFixed() + '%<br>' +
-        '<p>Poverty Rate: ' + (features[0].properties.pov_rate*100).toFixed() + '%</p>';
+        '<p></p>Asian: ' + (features[0].properties.perc_asian * 100).toFixed() + '%<br>' +
+        'Black: ' + (features[0].properties.perc_black * 100).toFixed() + '%<br>' +
+        'Hispanic: ' + (features[0].properties.perc_hisp * 100).toFixed() + '%<br>' +
+        'Native: ' + (features[0].properties.perc_native * 100).toFixed() + '%<br>' +
+        'White: ' + (features[0].properties.perc_white * 100).toFixed() + '%<br>' +
+        '<p>Poverty Rate: ' + (features[0].properties.pov_rate * 100).toFixed() + '%</p>';
 
       // Ensure that if the map is zoomed out such that multiple
       // copies of the feature are visible, the popup appears
