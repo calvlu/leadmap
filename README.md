@@ -1,6 +1,6 @@
 # Lead map
 
-![Alt text](leadmap_screenshot.png)
+[![alt text](leadmap_screenshot.png)](https://calvlu.github.io/leadmap/)
 
 ![Alt text](leadhist.png)
 
