@@ -37,7 +37,7 @@ map.on('load', function() {
   });
   // Create a popup, but don't add it to the map yet.
   var popup = new mapboxgl.Popup({
-    offset: 15,
+    offset: 12,
     closeButton: false
   });
 
